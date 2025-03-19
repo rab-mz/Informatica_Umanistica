@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricette dal Mondo</title>
+
+    <!-- Dublin Core Metadata - Correctly placed in the head -->
+    <meta name="DC.title" content="Ricette dal Mondo">
+    <meta name="DC.creator" content="Chef Internazionale">
+    <meta name="DC.subject" content="Cucina, Ricette, Gastronomia mondiale">
+    <meta name="DC.description" content="Collezione di ricette tradizionali da diverse culture del mondo">
+    <meta name="DC.publisher" content="Ricette dal Mondo">
+    <meta name="DC.date" content="2025-03-17">
+    <meta name="DC.type" content="InteractiveResource">
+    <meta name="DC.format" content="text/html">
+    <meta name="DC.language" content="it">
+    <meta name="DC.rights" content="Copyright 2025 Ricette dal Mondo - Tutti i diritti riservati">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Ricette dal Mondo</h1>
+</header>
+
+<nav>
+    <a href="#home" class="active" onclick="showHomePage()">Home</a>
+    <a href="#collezione" onclick="showRecipes('Collezione')">Collezione</a>
+    <a href="#contatti" onclick="showContactPage()">Contatti</a>
+</nav>
+
+
+<div class="breadcrumbs container  mt-5 mb-2" id="breadcrumbs">
+    <a href="#" onclick="showHomePage()">Home</a>
+</div>
+<div class="container" id="home-section">
+    <h2 class="section-title">Cucine Tradizionali</h2>
+
+    <div class="grid">
+        <div class="cuisine" onclick="showRecipes('Cucina Italiana')">
+            <img src="https://images.unsplash.com/photo-1571167366136-b57e07761625?q=80&w=1024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D alt=" Cucina Italiana">
+            <h3>Cucina Italiana</h3>
+            <div class="category-info">
+                <div>Categoria: Cucina mediterranea, Pasta, Pizza</div>
+                <div>Tipo: Collezione</div>
+                <div>Origine: Italia</div>
+            </div>
+        </div>
+        <div class="cuisine" onclick="showRecipes('Cucina Palestinese')">
+            <img src="https://images.unsplash.com/photo-1542528180-0c79567c66de?q=80&w=1024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cucina Palestinese">
+            <h3>Cucina Palestinese</h3>
+            <div class="category-info">
+                <div>Categoria: Medio Oriente, Falafel, Hummus</div>
+                <div>Tipo: Collezione</div>
+                <div>Origine: Palestina</div>
+            </div>
+        </div>
+        <div class="cuisine" onclick="showRecipes('Cucina Asiatica')">
+            <img src="https://plus.unsplash.com/premium_photo-1661432501995-2612dfa06f60?q=40&w=1024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cucina Asiatica">
+            <h3>Cucina Asiatica</h3>
+            <div class="category-info">
+                <div>Categoria: Riso, Sushi, Curry</div>
+                <div>Tipo: Collezione</div>
+                <div>Origine: Asia</div>
+            </div>
+        </div>
+        <div class="cuisine" onclick="showRecipes('Cucina Messicana')">
+            <img src="https://images.unsplash.com/photo-1615870216519-2f9fa575fa5c?q=40&w=1024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cucina Messicana">
+            <h3>Cucina Messicana</h3>
+            <div class="category-info">
+                <div>Categoria: Tacos, Guacamole, Chili</div>
+                <div>Tipo: Collezione</div>
+                <div>Origine: Messico</div>
+            </div>
+        </div>
+        <div class="cuisine" onclick="showRecipes('Cucina Greca')">
+            <img src="https://plus.unsplash.com/premium_photo-1667215177072-6539146bc577?q=80&w=1024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cucina Francese">
+            <h3>Cucina Greca</h3>
+            <div class="category-info">
+                <div>Categoria:</div>
+                <div>Tipo: Collezione</div>
+                <div>Origine: Grecia</div>
+            </div>
+        </div>
+        <div class="cuisine" onclick="showRecipes('Cucina Francese')">
+            <img src="https://images.unsplash.com/photo-1615199348139-00bf10980769?q=40&w=1024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cucina Francese">
+            <h3>Cucina Francese</h3>
+            <div class="category-info">
+                <div>Categoria: Croissant, Coq au Vin, Ratatouille</div>
+                <div>Tipo: Collezione</div>
+                <div>Origine: Francia</div>
+            </div>
+        </div>
+        <div class="cuisine" onclick="showRecipes('Cucina Indiana')">
+            <img src="https://plus.unsplash.com/premium_photo-1694506374847-ced565472398?q=40&w=1024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cucina Indiana">
+            <h3>Cucina Indiana</h3>
+            <div class="category-info">
+                <div>Categoria: Curry, Paneer, Naan</div>
+                <div>Tipo: Collezione</div>
+                <div>Origine: India</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recipe Collection Section -->
+<div class="container recipes" id="recipe-section">
+    <a href="#" class="back-btn" onclick="showHomePage()">← Torna alla Pagina Principale</a>
+
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-6">
+            <div class="input-group search-bar">
+                <input type="search"
+                       class="form-control"
+                       placeholder="Cerca ricetta..."
+                       aria-label="Cerca ricetta">
+
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title" id="recipe-title"></h2>
+    <div class="recipe-filters">
+        <div class="breadcrumbs mt-5 mb-2" id="recipe-breadcrumbs"></div>
+        <div class="keywords-container" id="recipe-keywords"></div>
+    </div>
+    <div class="recipes-grid" id="recipes-container">
+
+        <!-- Recipes will be dynamically populated here -->
+    </div>
+    <div aria-label="Page navigation example">
+        <ul class="pagination justify-content-center mt-5">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Precedente</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Successiva</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Recipe Detail Modal -->
+<div id="recipe-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeRecipeModal()">&times;</span>
+        <div id="recipe-detail-content">
+            <!-- Recipe details will be dynamically populated here -->
+        </div>
+    </div>
+</div>
+
+<!-- Web Project Plan Section -->
+<div id="project-section" class="project-section">
+    <section id="idea">
+        <h1>Idea</h1>
+        <p>
+            Il progetto consiste in una collezione digitale di ricette tradizionali provenienti da diverse culture culinarie.
+            L’obiettivo è preservare il patrimonio gastronomico, offrendo uno strumento pratico e intuitivo per appassionati,
+            studenti di gastronomia e turisti culinari. Ogni ricetta è presentata in modo dettagliato con ingredienti, istruzioni e fotografie,
+            organizzata attraverso metadati (ispirati al Dublin Core) e resa facilmente consultabile grazie a un’interfaccia con filtri e ricerca.
+        </p>
+    </section>
+
+    <section id="brief">
+        <h1>Brief</h1>
+        <ul>
+            <li><strong>Finalità e obiettivi del progetto:</strong> Condividere e valorizzare ricette tradizionali di diverse culture, offrendo supporto pratico e promuovendo il patrimonio culinario.</li>
+            <li><strong>Pubblico di riferimento:</strong> Appassionati di cucina, studenti di gastronomia, turisti culinari.</li>
+            <li><strong>Accesso alla risorsa:</strong> Sito web pubblico, responsive e multipiattaforma (desktop e mobile).</li>
+            <li><strong>Contenuti:</strong> Ogni ricetta è un “item” con titolo, ingredienti, istruzioni, foto e metadati (regione di origine, difficoltà, ecc.), raccolti da fonti affidabili e con immagini da risorse libere.</li>
+        </ul>
+    </section>
+
+    <section id="benchmark">
+        <h1>BenchMark</h1>
+        <ul>
+            <li><strong>Idea:</strong> Ispirazione da piattaforme come GialloZafferano e AllRecipes, con un focus sulle ricette tradizionali.</li>
+            <li>
+                <strong>Contenuti Esistenti:</strong>
+                <ul>
+                    <li><em>GialloZafferano:</em> Ricette con foto, filtri per categoria e ricerca intuitiva.</li>
+                    <li><em>AllRecipes:</em> Vasta collezione di ricette con recensioni e filtri avanzati.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Mappa dei concetti:</strong>
+                <p>Home → Collezione → Item</p>
+                <img src="schema.svg" alt="immagine" class="img-fluid w-75">
+            </li>
+            <li>
+                <strong>Schema delle dipendenze:</strong>
+                <p>
+                    Home: Introduzione generale e collegamenti alle collezioni. <br>
+                    Collezione: Elenco delle ricette con filtri. <br>
+                    Item: Pagina dettagliata con foto, ingredienti, istruzioni e metadati.
+                </p>
+                <!-- Immagine dello schema delle dipendenze -->
+
+            </li>
+            <li>
+                <strong>Categorie di un item folgia:</strong>
+                <ul>
+                    <li>Titolo</li>
+                    <li>Creatore (Regione o autore tradizionale)</li>
+                    <li>Data (origine stimata)</li>
+                    <li>Descrizione</li>
+                    <li>Tipo (primo, secondo, dolce, ecc.)</li>
+                    <li>Formato (testo e immagine)</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="layout">
+        <h1>Layout</h1>
+        <ul>
+            <li>
+                <strong>HomePage:</strong>
+                <p>Header con menù di navigazione, sezione introduttiva e link alle collezioni.</p>
+                <!-- Wireframe della HomePage -->
+                <img src="wireframe-home.jpg" alt="Wireframe HomePage" class="img-fluid w-75">
+            </li>
+            <li>
+                <strong>Collezione:</strong>
+                <p>Elenco delle ricette con miniature e sidebar con filtri (tipo, difficoltà, ecc.).</p>
+                <!-- Wireframe della Collezione -->
+                <img src="wireframe-collection.jpg" alt="Wireframe Collezione" class="img-fluid w-75">
+            </li>
+            <li>
+                <strong>Contatti:</strong>
+                <p>Sezione dedicata al form di contatto e feedback degli utenti.</p>
+                <!-- Wireframe della sezione Contatti -->
+                <img src="wireframe-contact.jpg" alt="Wireframe Contatti" class="img-fluid w-75">
+            </li>
+        </ul>
+    </section>
+
+    <section id="usabilita">
+        <h1>Usabilità</h1>
+        <ul>
+            <li><strong>Architettura:</strong> Struttura chiara con filtri per keywords e breadcrumbs per facilitare la navigazione.</li>
+            <li><strong>Aspetto e tipografia:</strong> Design semplice e intuitivo con colori caldi (rosso, beige, toni sabbia), font leggibili, titoli in grassetto e testi ben spaziati         <p class="font-sample fw-bold">Font Usato: Montserrat</p>.</li>
+            Palette di colori
+            <li class="color-palette">
+                <div class="color-swatch" style="background: #d32f2f"> #d32f2f</div>
+                <div class="color-swatch" style="background: #f8f9fa"> #f8f9fa</div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="servizi">
+        <h1>Servizi</h1>
+        <ul>
+            <li>
+                <strong>Strumenti di browsing:</strong>
+                <ul>
+                    <li>Briciole di pane (breadcrumbs)</li>
+                    <li>Nav bar</li>
+                    <li>Filtri per keywords e barra di ricerca</li>
+                    <li>Pagination per la gestione dell’elenco</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Strumenti di interazione:</strong>
+                <ul>
+                    <li>Grid di foto</li>
+                    <li>Card interattivi</li>
+                    <li>Collegamento tramite keywords per ricette simili</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section id="bibliografia">
+        <h1>Bibliografia e Sitografia</h1>
+        <ul>
+            <li><strong>Siti:</strong> GialloZafferano, AllRecipes, Unsplash e portali di cucina araba per ispirazione e immagini.</li>
+            <li><strong>Libri:</strong> “La Cucina Italiana”, “Feast: Food of the Islamic World”.</li>
+        </ul>
+    </section>
+
+</div>
+
+<!-- Contact Section -->
+<div class="container" id="contact-section">
+    <a href="#" class="back-btn" onclick="showHomePage()">← Torna alla Pagina Principale</a>
+    <div class="container contact-section">
+        <h2 class="section-title">Contattaci</h2>
+        <div class="contact-form">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Oggetto:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Messaggio:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Invia Messaggio</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Ricette dal Mondo</h3>
+            <p>La tua destinazione per scoprire ricette autentiche da tutto il mondo.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Collegamenti Rapidi</h3>
+            <p><a href="#" onclick="showHomePage()">Home</a></p>
+            <p><a href="#" onclick="showRecipes('Collezione')">Collezione</a></p>
+            <p><a href="#" onclick="showContactPage()">Contatti</a></p>
+            <p><a href="#" onclick="showProjectPage()">Web project plan</a></p>
+        </div>
+        <div class="footer-section">
+            <h3>Contatti</h3>
+            <p>Email: info@ricettedalmondo.it</p>
+            <p>Telefono: +39 123 456 7890</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Ricette dal Mondo - Tutti i diritti riservati</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
